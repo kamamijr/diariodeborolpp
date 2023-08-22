@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diario de Bordo Mikael</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Inclua o arquivo de estilo do Prism.js -->
+  <link href="css/prism.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <nav class="navbar navbar-dark bg-dark fixed-top" id="nav">
+      <div class="container-fluid">
+        <a id ="diario"class="navbar-brand" href="/">Diario de Bordo Mikael</a>
+      
+   
+              <form class="d-flex mt-3" role="search"  onsubmit="return searchLi()">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+              
+              <button class="btn btn-success" type="submit">Search</button>
+            </form>
+          
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" style="display: none;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Introdução" id="introducaoLi"> Introdução</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Variáveis" id="variaveisLi">Variáveis </a>
+                </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Tipos" id ="tipodado">Tipos de dados</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Expressões" id ="expressao"> Expressões e sentenças de atribuição</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Estruturas" id="estruturacontrole"> Estruturas de Controle   </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Subprogramas" id="Subprogramas"> Subprogramas</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Tratamento" id="tratamento"> Tratamento de excecao</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Sintaxe" id="sintaxe"> Sintaxe   </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Semântica" id="semantica"> Semântica  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Orientação" id="poo"> Orientação a Objetos </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Linguagem" id="poo"> Linguagem Funcional </a>
+            </li>
+              
+            </ul>
+            </div>
+          </div>
+      
+            </div>
+        
+      </nav>
+</head>
+<body>
+  <div class="dropdown-menu" id="searchResults" ></div>
+<table style="margin-top:100px;">
+  <tr>
+    <td style="  align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: inline-block;
+    max-width:800px;
+    overflow-y: auto;
+    padding: 20px; 
+    height: 100%;" 
+    id="esquerda">
+      <p><h3 style=" color:red;">Tópico:Subprogramas em C#<br></h3>
+
+Os subprogramas, também conhecidos como rotinas ou funções, são blocos de código independentes que podem ser chamados e executados em um programa. Eles facilitam a modularidade, reutilização de código e a organização de lógica complexa.<br>
+
+<h4>Subtópico: Introdução</h4>
+
+
+A introdução aos subprogramas abrange suas características fundamentais. Os subprogramas podem ser funções (retornam um valor) ou procedimentos (não retornam um valor). Eles podem ser chamados várias vezes em diferentes partes do programa.<br>
+
+<h4>Subtópico: Características</h4>
+
+
+As características dos subprogramas incluem a capacidade de encapsular lógica, aceitar parâmetros de entrada, executar instruções e, em alguns casos, retornar um valor.<br>
+
+<h4>Subtópico: Definições Básicas</h4>
+
+
+A definição básica de um subprograma envolve nome, parâmetros (se houver) e corpo. O corpo contém as instruções a serem executadas.<br>
+
+<h4>Subtópico: Parâmetros</h4>
+
+
+Os parâmetros permitem a comunicação entre o chamador e o subprograma. Eles podem ser de entrada, saída ou ambos. Funções podem retornar valores via parâmetros de saída.<br>
+
+<h4>Subtópico: Funções e Procedimentos</h4>
+
+
+Funções retornam um valor, enquanto procedimentos não retornam um valor. As funções podem ser usadas em expressões, enquanto os procedimentos são chamados apenas por seu efeito colateral.<br>
+
+<h4>Subtópico: Variáveis Locais</h4>
+
+
+Variáveis locais são usadas dentro do subprograma e não são acessíveis fora dele. Elas têm escopo limitado à execução do subprograma.<br>
+
+<h4>Subtópico: Subprogramas Aninhados</h4>
+
+
+Subprogramas podem ser aninhados dentro de outros subprogramas. Isso ajuda a organizar a lógica complexa e a melhorar a modularidade.<br>
+
+<h4>Subtópico: Passagem de Parâmetros</h4>
+
+
+A passagem de parâmetros permite que informações sejam transmitidas entre o chamador e o subprograma. Isso pode ser feito por valor, referência ou combinações.<br>
+
+<h4>Subtópico: Implementação de Passagem de Parâmetro</h4>
+
+A implementação de passagem de parâmetros envolve determinar como os valores são transmitidos entre o chamador e o subprograma. Isso afeta a manipulação dos parâmetros.<br>
+
+<h4>Subtópico: Verificação de Tipo</h4>
+
+A verificação de tipo é importante para garantir que os argumentos passados correspondam aos tipos esperados pelos parâmetros.<br>
+
+<h4>Subtópico: Array Multidimensional</h4>
+
+Arrays multidimensionais podem ser passados como parâmetros para subprogramas, permitindo a manipulação de matrizes e estruturas de dados complexas.<br>
+
+<h4>Subtópico: Subprograma como Parâmetros</h4>
+
+
+Os subprogramas também podem ser passados como parâmetros para outros subprogramas. Isso é útil para criar abstrações de alto nível.<br>
+
+
+    </p>
+    </td>
+
+    
+    <td style="color:white;"id="direita">
+      <h4>EXEMPLOS DE CODIGO</h4>
+      <h4>Exemplo de Código: Definição de Função em C#</h4>
+
+
+class Program {<br>
+    static int Soma(int a, int b) {<br>
+        return a + b;<br>
+    }<br>
+    <br>
+    static void Main(string[] args) {<br>
+        int resultado = Soma(3, 5);<br>
+        Console.WriteLine(resultado); // Resultado: 8<br>
+    }<br>
+}<br>
+<div style="background-color:white; height:1px; width:100%;"></div>
+<h4>Exemplo de Código: Definição de Procedimento em C#</h4>
+
+
+class Program {<br>
+    static void Saudacao(string nome) {<br>
+        Console.WriteLine("Olá, " + nome + "!");<br>
+    }<br>
+    <br>
+    static void Main(string[] args) {<br>
+        Saudacao("Maria"); // Saída: Olá, Maria!<br>
+    }<br>
+}<br>
+<div style="background-color:white; height:1px; width:100%;"></div>
+<h4>Exemplo de Código: Passagem de Parâmetro por Valor em C#</h4>
+
+
+class Program {<br>
+    static void Dobro(int num) {<br>
+        num *= 2;<br>
+        Console.WriteLine("Dentro da função: " + num);<br>
+    }<br>
+    <br>
+    static void Main(string[] args) {<br>
+        int valor = 5;<br>
+        Dobro(valor);<br>
+        Console.WriteLine("Fora da função: " + valor); // Saída: Fora da função: 5<br>
+    }<br>
+}<br>
+<div style="background-color:white; height:1px; width:100%;"></div>
+<h4>Exemplo de Código: Passagem de Parâmetro por Referência em C#</h4>
+
+
+class Program {<br>
+    static void Dobro(ref int num) {<br>
+        num *= 2;<br>
+        Console.WriteLine("Dentro da função: " + num);<br>
+    }<br>
+    <br>
+    static void Main(string[] args) {<br>
+        int valor = 5;<br>
+        Dobro(ref valor);<br>
+        Console.WriteLine("Fora da função: " + valor); // Saída: Fora da função: 10<br>
+    }<br>
+}<br>
+<div style="background-color:white; height:1px; width:100%;"></div>
+<h4>Exemplo de Código: Subprograma Aninhado em C#</h4>
+
+class Program {<br>
+    static void Externo() {<br>
+        Console.WriteLine("Início do subprograma externo");<br>
+        Interno();<br>
+        Console.WriteLine("Fim do subprograma externo");<br>
+    }<br>
+    <br>
+    static void Interno() {<br>
+        Console.WriteLine("Subprograma interno");<br>
+    }<br>
+    <br>
+    static void Main(string[] args) {<br>
+        Externo();<br>
+    }<br>
+}<br>
+<div style="background-color:white; height:1px; width:100%;"></div>
+<h4>Exemplo de Código: Passagem de Subprograma como Parâmetro em C#</h4>
+
+
+class Program {<br>
+    static void MostrarMensagem() {<br>
+        Console.WriteLine("Olá, mundo!");<br>
+    }<br>
+    <br>
+    static void AplicarSubprograma(Action subprograma) {<br>
+        subprograma();<br>
+    }<br>
+    <br>
+    static void Main(string[] args) {<br>
+        AplicarSubprograma(MostrarMensagem); // Saída: Olá, mundo!<br>
+    }<br>
+}<br>
+
+  
+    </td>
+  </tr>
+</table>
+  <style>
+
+#searchResults {
+      position: absolute;
+      bottom: 89%;
+      right: 0;
+      margin-right: 92px;
+      width: 11.2%;
+      background-color: white;
+      border: 1px solid #ccc;
+      display: none;
+    }
+
+#esquerda {
+  background-color: white; /* Cor de fundo para a Div Esquerda */
+}
+h4{
+  margin-top:10px;
+}
+#direita {
+
+    background-color: black; /* Cor de fundo para a Div Direita */
+}
+  </style>
+</body>
+<script>
+    function searchLi() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementsByClassName("navbar-nav")[0];
+        li = ul.getElementsByTagName("li");
+        var dropdownMenu = document.getElementById("searchResults");
+        var dropdownContent = "";
+      
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = ""; // Mostra o elemento li se a busca for correspondente
+      
+            // Adiciona o item ao dropdown
+            dropdownContent += "<a class='dropdown-item' href='" + a.href + "'>" + txtValue + "</a>";
+          } else {
+            li[i].style.display = "none"; // Oculta o elemento li se a busca não for correspondente
+          }
+        }
+      
+        // Exibe o dropdown com os resultados
+        if (dropdownContent) {
+          dropdownMenu.innerHTML = dropdownContent;
+          dropdownMenu.style.display = "inline-block";
+
+        } 
+      
+        // Evita que o formulário seja enviado
+        return false;
+      }
+  </script>
+  <script>
+    // Inicializa o Prism.js
+    document.addEventListener("DOMContentLoaded", function () {
+      Prism.highlightAll();
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      Prism.highlightAll();
+  
+      // Obtém a área de código
+      const codeArea = document.querySelector("pre code");
+  
+      // Adiciona um evento de clique para capturar o código colado
+      codeArea.addEventListener("click", function () {
+        const text = prompt("Cole o código aqui:");
+        codeArea.textContent = text;
+        Prism.highlightAll();
+      });
+    });
+  </script>
+<style>
+    
+    #searchResults {
+       background-color: grey;
+    }
+    #cap {
+        margin top: 10px;
+        margin left: 20px;
+    }
+    h5 {
+        color: white;
+        text-align: center;
+    }
+    #diario {
+        margin-top: 10px;
+    }
+    .navbar {
+        height: 10px; /* Altere o valor conforme desejado */
+      }
+      
+      /* Remova a barra cinza abaixo do div container-fluid */
+      .container-fluid {
+        height: 60px;
+        margin-top: -9px;
+        background-color: black;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-bottom: none; /* Adicione esta linha para remover a borda inferior */
+      }
+      
+      /* Estilo adicional para melhorar a aparência do conteúdo */
+      body {
+        margin: 0; /* Remova as margens do corpo para preencher a tela */
+        padding-top: 60px; /* Adicione um espaçamento no topo do corpo para evitar que o conteúdo fique atrás da navbar */
+      }
+      
+      /* Tornar o div container-fluid um pouco menor e centralizado */
+      #tab {
+        margin-top: 100px; /* Reduza a margem superior conforme desejado */
+        display: flex;
+        justify-content: center;
+      }
+    td {
+        padding: 10px; /* Altere o valor conforme necessário para obter o espaçamento desejado */
+      }
+    #div1 {
+        align-items:left;
+    }
+    @property --rotate {
+        syntax: "<angle>";
+        initial-value: 132deg;
+        inherits: false;
+      }
+      
+      :root {
+        --card-height: 65vh;
+        --card-width: calc(var(--card-height) / 1.5);
+      }
+      
+      
+      body {
+        min-height: 100vh;
+        background: #212534;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        box-sizing: border-box;
+      }
+      
+      
+      .card {
+        background: #191c29;
+        width: var(--card-width);
+        height: var(--card-height);
+        padding: 3px;
+        position: relative;
+        border-radius: 6px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        font-size: 1.5em;
+        color: rgb(88 199 250 / 0%);
+        cursor: pointer;
+        font-family: cursive;
+      }
+      
+      .card:hover {
+        color: rgb(88 199 250 / 100%);
+        transition: color 1s;
+      }
+      .card:hover:before, .card:hover:after {
+        animation: none;
+        opacity: 0;
+      }
+      
+      
+      .card::before {
+        content: "";
+        width: 104%;
+        height: 102%;
+        border-radius: 8px;
+        background-image: linear-gradient(
+          var(--rotate)
+          , #5ddcff, #3c67e3 43%, #4e00c2);
+          position: absolute;
+          z-index: -1;
+          top: -1%;
+          left: -2%;
+          animation: spin 2.5s linear infinite;
+      }
+      
+      .card::after {
+        position: absolute;
+        content: "";
+        top: calc(var(--card-height) / 6);
+        left: 0;
+        right: 0;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        transform: scale(0.8);
+        filter: blur(calc(var(--card-height) / 6));
+        background-image: linear-gradient(
+          var(--rotate)
+          , #5ddcff, #3c67e3 43%, #4e00c2);
+          opacity: 1;
+        transition: opacity .5s;
+        animation: spin 2.5s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% {
+          --rotate: 0deg;
+        }
+        100% {
+          --rotate: 360deg;
+        }
+      }
+      
+      a {
+        color: #212534;
+        text-decoration: none;
+        font-family: sans-serif;
+        font-weight: bold;
+        margin-top: 2rem;
+      }
+      
+      
+      
+    </style>      
+</html>

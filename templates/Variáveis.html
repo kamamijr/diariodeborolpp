@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diario de Bordo Mikael</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Inclua o arquivo de estilo do Prism.js -->
+  <link href="css/prism.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <nav class="navbar navbar-dark bg-dark fixed-top" id="nav">
+      <div class="container-fluid">
+        <a id ="diario"class="navbar-brand" href="/">Diario de Bordo Mikael</a>
+      
+   
+              <form class="d-flex mt-3" role="search"  onsubmit="return searchLi()">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+              
+              <button class="btn btn-success" type="submit">Search</button>
+            </form>
+          
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" style="display: none;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Introdução" id="introducaoLi"> Introdução</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Variáveis" id="variaveisLi">Variáveis </a>
+                </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Tipos" id ="tipodado">Tipos de dados</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Expressões" id ="expressao"> Expressões e sentenças de atribuição</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Estruturas" id="estruturacontrole"> Estruturas de Controle   </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Subprogramas" id="Subprogramas"> Subprogramas</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Tratamento" id="tratamento"> Tratamento de excecao</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Sintaxe" id="sintaxe"> Sintaxe   </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Semântica" id="semantica"> Semântica  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Orientação" id="poo"> Orientação a Objetos </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Linguagem" id="poo"> Linguagem Funcional </a>
+            </li>
+              
+            </ul>
+            </div>
+          </div>
+      
+            </div>
+        
+      </nav>
+</head>
+<body>
+  <div class="dropdown-menu" id="searchResults" ></div>
+<table style="margin-top:100px;">
+  <tr>
+    <td style="  align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: inline-block;
+    max-width:800px;
+    overflow-y: auto;
+    padding: 20px; 
+    height: 100%;" 
+    id="esquerda">
+      <p><h3 style=" color:red;">Tópico:Variáveis em C#<br></h3>
+        
+
+        
+        As variáveis são componentes fundamentais em programação, usadas para armazenar e manipular dados. Elas têm nome, valor e tipo associados, e são utilizadas para representar informações diversas dentro do programa.<br>
+        
+        <h4>Subtópico: Nomes</h4>
+        
+        
+        Os nomes das variáveis devem seguir regras específicas, incluindo tamanho e forma permitidos. Algumas palavras são reservadas e não podem ser usadas como nomes de variáveis.<br>
+        
+        <h4>Subtópico: Variáveis</h4>
+        
+        
+        As variáveis têm três componentes principais: endereço (localização na memória), valor (dados armazenados) e tipo (natureza dos dados).<br>
+        
+        <h4>Subtópico: Amarração</h4>
+        
+        
+        A amarração se refere à associação entre o nome da variável, seu valor e tipo. Pode ser estática (fixada durante a compilação) ou dinâmica (fixada em tempo de execução).<br>
+        
+        <h4>Subtópico: Inferência de Tipo</h4>
+        
+        
+        A inferência de tipo permite que o compilador determine automaticamente o tipo da variável com base no valor atribuído a ela.<br>
+        
+        <h4>Subtópico: Amarrações de Armazenagem</h4>
+        
+        
+        As amarrações de armazenamento se referem à forma como as variáveis são armazenadas na memória. Isso inclui armazenamento estático (em tempo de compilação), na pilha (para variáveis locais) e no heap (para objetos dinamicamente alocados).<br>
+        
+        <h4>Subtópico: Escopo</h4>
+        
+        
+        O escopo determina onde uma variável pode ser acessada e manipulada. Pode ser estático (definido em subprogramas, blocos ou globalmente) ou dinâmico (determinado pelo fluxo de execução).<br>
+        
+        <h4>Subtópico: Ambiente de Referenciação</h4>
+        
+        
+        O ambiente de referênciação é o conjunto de todas as variáveis acessíveis em um determinado ponto do programa.<br>
+        
+        <h4>Subtópico: Constantes</h4>
+        
+        
+        As constantes são valores fixos que não podem ser alterados durante a execução do programa. Elas fornecem uma maneira de nomear valores importantes e reduzir a possibilidade de erros.<br>
+        
+        </p>
+    </td>
+
+    
+    <td style="color:white;"id="direita">
+      <h4>EXEMPLOS DE CODIGO</h4>
+      <h4>Exemplo de Código: Variáveis e Constantes em C#</h4>
+
+
+using System;<br>
+<br>
+class Program {<br>
+    static void Main(string[] args) {<br>
+        // Variáveis<br>
+        int idade = 25;<br>
+        double altura = 1.75;<br>
+        string nome = "João";<br>
+        <br>
+        Console.WriteLine("Nome: " + nome);<br>
+        Console.WriteLine("Idade: " + idade);<br>
+        Console.WriteLine("Altura: " + altura);<br>
+        <br>
+        // Constantes<br>
+        const double PI = 3.14159;<br>
+        Console.WriteLine("Valor de PI: " + PI);<br>
+        <br>
+        // Inferência de Tipo<br>
+        var salario = 1500.50;<br>
+        Console.WriteLine("Salário: " + salario);<br>
+    }<br>
+}<br>
+<div style="background-color:white; height:1px; width:100%;"></div>
+<h4>Exemplo de Código: Escopo em C#</h4>
+
+
+using System;<br>
+<br>
+class Program {<br>
+    static int variavelGlobal = 10;<br>
+    <br>
+    static void Metodo() {<br>
+        int variavelLocal = 5;<br>
+        Console.WriteLine("Variável Local: " + variavelLocal);<br>
+        Console.WriteLine("Variável Global: " + variavelGlobal);<br>
+    }<br>
+    <br>
+    static void Main(string[] args) {<br>
+        Metodo();<br>
+        // Console.WriteLine("Variável Local: " + variavelLocal); // Erro: variávelLocal não é acessível aqui<br>
+        Console.WriteLine("Variável Global: " + variavelGlobal);<br>
+    }<br>
+}<br>
+<div style="background-color:white; height:1px; width:100%;"></div>
+<h4>Exemplo de Código: Amarração de Armazenamento em C#</h4>
+
+
+using System;<br>
+<br>
+class Program {<br>
+    static int variavelGlobal = 10;<br>
+    <br>
+    static void Metodo() {<br>
+        int variavelLocal = 5;<br>
+        Console.WriteLine("Variável Local: " + variavelLocal);<br>
+    }<br>
+    <br>
+    static void Main(string[] args) {<br>
+        Metodo();<br>
+        Console.WriteLine("Variável Global: " + variavelGlobal);<br>
+    }<br>
+}<br>
+<div style="background-color:white; height:1px; width:100%;"></div>
+<h4>Exemplo de Código: Inferência de Tipo em C#</h4>
+
+
+using System;<br>
+<br>
+class Program {<br>
+    static void Main(string[] args) {<br>
+        var idade = 30;<br>
+        var nome = "Maria";<br>
+        var salario = 2000.75;<br>
+        <br>
+        Console.WriteLine("Nome: " + nome);<br>
+        Console.WriteLine("Idade: " + idade);<br>
+        Console.WriteLine("Salário: " + salario);<br>
+    }<br>
+}<br>
+
+
+  
+    </td>
+  </tr>
+</table>
+  <style>
+
+#searchResults {
+      position: absolute;
+      bottom: 89%;
+      right: 0;
+      margin-right: 92px;
+      width: 11.2%;
+      background-color: white;
+      border: 1px solid #ccc;
+      display: none;
+    }
+
+#esquerda {
+  background-color: white; /* Cor de fundo para a Div Esquerda */
+}
+h4{
+  margin-top:10px;
+}
+#direita {
+
+    background-color: black; /* Cor de fundo para a Div Direita */
+}
+  </style>
+</body>
+<script>
+    function searchLi() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementsByClassName("navbar-nav")[0];
+        li = ul.getElementsByTagName("li");
+        var dropdownMenu = document.getElementById("searchResults");
+        var dropdownContent = "";
+      
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = ""; // Mostra o elemento li se a busca for correspondente
+      
+            // Adiciona o item ao dropdown
+            dropdownContent += "<a class='dropdown-item' href='" + a.href + "'>" + txtValue + "</a>";
+          } else {
+            li[i].style.display = "none"; // Oculta o elemento li se a busca não for correspondente
+          }
+        }
+      
+        // Exibe o dropdown com os resultados
+        if (dropdownContent) {
+          dropdownMenu.innerHTML = dropdownContent;
+          dropdownMenu.style.display = "inline-block";
+
+        } 
+      
+        // Evita que o formulário seja enviado
+        return false;
+      }
+  </script>
+  <script>
+    // Inicializa o Prism.js
+    document.addEventListener("DOMContentLoaded", function () {
+      Prism.highlightAll();
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      Prism.highlightAll();
+  
+      // Obtém a área de código
+      const codeArea = document.querySelector("pre code");
+  
+      // Adiciona um evento de clique para capturar o código colado
+      codeArea.addEventListener("click", function () {
+        const text = prompt("Cole o código aqui:");
+        codeArea.textContent = text;
+        Prism.highlightAll();
+      });
+    });
+  </script>
+<style>
+    
+    #searchResults {
+       background-color: grey;
+    }
+    #cap {
+        margin top: 10px;
+        margin left: 20px;
+    }
+    h5 {
+        color: white;
+        text-align: center;
+    }
+    #diario {
+        margin-top: 10px;
+    }
+    .navbar {
+        height: 10px; /* Altere o valor conforme desejado */
+      }
+      
+      /* Remova a barra cinza abaixo do div container-fluid */
+      .container-fluid {
+        height: 60px;
+        margin-top: -9px;
+        background-color: black;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-bottom: none; /* Adicione esta linha para remover a borda inferior */
+      }
+      
+      /* Estilo adicional para melhorar a aparência do conteúdo */
+      body {
+        margin: 0; /* Remova as margens do corpo para preencher a tela */
+        padding-top: 60px; /* Adicione um espaçamento no topo do corpo para evitar que o conteúdo fique atrás da navbar */
+      }
+      
+      /* Tornar o div container-fluid um pouco menor e centralizado */
+      #tab {
+        margin-top: 100px; /* Reduza a margem superior conforme desejado */
+        display: flex;
+        justify-content: center;
+      }
+    td {
+        padding: 10px; /* Altere o valor conforme necessário para obter o espaçamento desejado */
+      }
+    #div1 {
+        align-items:left;
+    }
+    @property --rotate {
+        syntax: "<angle>";
+        initial-value: 132deg;
+        inherits: false;
+      }
+      
+      :root {
+        --card-height: 65vh;
+        --card-width: calc(var(--card-height) / 1.5);
+      }
+      
+      
+      body {
+        min-height: 100vh;
+        background: #212534;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        box-sizing: border-box;
+      }
+      
+      
+      .card {
+        background: #191c29;
+        width: var(--card-width);
+        height: var(--card-height);
+        padding: 3px;
+        position: relative;
+        border-radius: 6px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        font-size: 1.5em;
+        color: rgb(88 199 250 / 0%);
+        cursor: pointer;
+        font-family: cursive;
+      }
+      
+      .card:hover {
+        color: rgb(88 199 250 / 100%);
+        transition: color 1s;
+      }
+      .card:hover:before, .card:hover:after {
+        animation: none;
+        opacity: 0;
+      }
+      
+      
+      .card::before {
+        content: "";
+        width: 104%;
+        height: 102%;
+        border-radius: 8px;
+        background-image: linear-gradient(
+          var(--rotate)
+          , #5ddcff, #3c67e3 43%, #4e00c2);
+          position: absolute;
+          z-index: -1;
+          top: -1%;
+          left: -2%;
+          animation: spin 2.5s linear infinite;
+      }
+      
+      .card::after {
+        position: absolute;
+        content: "";
+        top: calc(var(--card-height) / 6);
+        left: 0;
+        right: 0;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        transform: scale(0.8);
+        filter: blur(calc(var(--card-height) / 6));
+        background-image: linear-gradient(
+          var(--rotate)
+          , #5ddcff, #3c67e3 43%, #4e00c2);
+          opacity: 1;
+        transition: opacity .5s;
+        animation: spin 2.5s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% {
+          --rotate: 0deg;
+        }
+        100% {
+          --rotate: 360deg;
+        }
+      }
+      
+      a {
+        color: #212534;
+        text-decoration: none;
+        font-family: sans-serif;
+        font-weight: bold;
+        margin-top: 2rem;
+      }
+      
+      
+      
+    </style>      
+</html>

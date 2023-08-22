@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diario de Bordo Mikael</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Inclua o arquivo de estilo do Prism.js -->
+  <link href="css/prism.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <nav class="navbar navbar-dark bg-dark fixed-top" id="nav">
+      <div class="container-fluid">
+        <a id ="diario"class="navbar-brand" href="/">Diario de Bordo Mikael</a>
+      
+   
+              <form class="d-flex mt-3" role="search"  onsubmit="return searchLi()">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+              
+              <button class="btn btn-success" type="submit">Search</button>
+            </form>
+          
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" style="display: none;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Introdução" id="introducaoLi"> Introdução</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Variáveis" id="variaveisLi">Variáveis </a>
+                </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Tipos" id ="tipodado">Tipos de dados</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Expressões" id ="expressao"> Expressões e sentenças de atribuição</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Estruturas" id="estruturacontrole"> Estruturas de Controle   </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Subprogramas" id="Subprogramas"> Subprogramas</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Tratamento" id="tratamento"> Tratamento de excecao</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Sintaxe" id="sintaxe"> Sintaxe   </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Semântica" id="semantica"> Semântica  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Orientação" id="poo"> Orientação a Objetos </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Linguagem" id="poo"> Linguagem Funcional </a>
+            </li>
+              
+            </ul>
+            </div>
+          </div>
+      
+            </div>
+        
+      </nav>
+</head>
+<body>
+  <div class="dropdown-menu" id="searchResults" ></div>
+<table style="margin-top:100px;">
+  <tr>
+    <td style="  align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: inline-block;
+    max-width:800px;
+    overflow-y: auto;
+    padding: 20px; 
+    height: 100%;" 
+    id="esquerda">
+      <p><h3 style=" color:red;">Tópico:Prolog#<br></h3>
+
+
+        Prolog é uma linguagem de programação de lógica baseada em regras, projetada para resolução de problemas complexos por meio de inferência lógica. Seu nome é derivado de "Programming in Logic" (Programação em Lógica). Prolog difere das linguagens de programação tradicionais ao se concentrar na declaração de fatos e regras, em vez de instruções sequenciais.<br>
+        
+        <h4>Principais Características:</h4>
+        
+        <h4>Paradigma Lógico:</h4>
+         Prolog se baseia na lógica de predicados, permitindo aos programadores declarar relações entre elementos e expressar regras através de cláusulas.<br>
+         <h4> Declarativo:</h4> 
+        Em vez de instruções que detalham o "como" de uma tarefa, Prolog lida com o "o quê", descrevendo as relações e deixando o sistema de inferência determinar as soluções.<br>
+        <h4>Unificação:</h4>
+         Um aspecto crucial em Prolog é a unificação, processo no qual termos e variáveis são combinados para estabelecer relações verdadeiras.<br>
+         <h4>Resolução de Consultas:</h4>
+        Prolog utiliza um mecanismo de busca para resolver consultas, explorando fatos e regras para encontrar soluções.<br>
+        <h4> Recursão:</h4> 
+        A recursão é amplamente empregada em Prolog para lidar com problemas complexos, permitindo a definição de tarefas em termos de tarefas mais simples.<br>
+        <h4>Padrão de Árvore: </h4>
+        A execução de programas Prolog pode ser visualizada como uma árvore de busca, na qual as soluções são encontradas ao percorrer os ramos da árvore.<br>
+        <h4>Aplicações:</h4>
+        <br>
+        <h4>Processamento de Linguagem Natural:</h4>
+         Prolog é usado em análise gramatical e semântica de textos, auxiliando na compreensão de linguagem natural.<br>
+         <h4>Sistemas Especialistas:</h4> 
+        É uma escolha comum para a construção de sistemas especialistas que tomam decisões baseadas em regras e fatos.<br>
+        <h4>Inteligência Artificial:</h4> 
+        Prolog é usado em IA para modelar conhecimento e raciocínio, como na solução de quebra-cabeças lógicos.<br>
+    <h4>Solução de Problemas Lógicos:</h4>
+        Ideal para problemas que podem ser descritos com regras lógicas, como jogos de lógica e enigmas.<br>
+       
+
+    </p>
+    </td>
+
+    
+    <td style="color:white;"id="direita">
+      <h3>EXEMPLOS DE CODIGO</h3>
+      <h4>Definindo Fatos e Regras:</h4>
+  
+      % Fatos<br>
+      gosta_de(joao, musica).<br>
+      gosta_de(maria, danca).<br>
+      gosta_de(ana, esportes).<br>
+      gosta_de(joao, esportes).<br>
+      <br>
+      % Regras<br>
+      amigos(X, Y) :- gosta_de(X, Z), gosta_de(Y, Z).<br>
+      <div style="background-color:white; height:1px; width:100%;"></div>
+      <h4>Consultas e Respostas:</h4>
+
+% Consulta<br>
+?- amigos(joao, maria).<br>
+
+% Resposta<br>
+true.<br>
+<div style="background-color:white; height:1px; width:100%;"></div>
+<h4>Recursão:</h4>
+
+% Definindo relação recursiva para cálculo de fatorial<br>
+fatorial(0, 1).<br>
+fatorial(N, Resultado) :- N > 0, N1 is N - 1, fatorial(N1, R1), Resultado is N * R<br>
+<div style="background-color:white; height:1px; width:100%;"></div>
+<h4>Listas:</h4>
+
+% Checando se um elemento está em uma lista<br>
+esta_em(X, [X|_]).<br>
+esta_em(X, [_|T]) :- esta_em(X, T).<br>
+<div style="background-color:white; height:1px; width:100%;"></div>
+<h4>Processamento de Linguagem Natural:</h4>
+
+% Definindo relação gramatical<br>
+frase --> sujeito, verbo, complemento.<br>
+sujeito --> [o, gato].<br>
+verbo --> [corre].<br>
+complemento --> [rapidamente].<br>
+<div style="background-color:white; height:1px; width:100%;"></div>
+<h4>Quebra-Cabeças Lógico (Sudoku):</h4>
+
+% Definindo regras para resolução de Sudoku<br>
+solve(Board) :- Board = Rows, maplist(all_distinct, Rows), transpose(Rows, Cols), maplist(all_distinct, Cols), Rows = [R1, R2, R3, R4, R5, R6, R7, R8, R9], blocks(R1, R2, R3), blocks(R4, R5, R6), blocks(R7, R8, R9).<br>
+<br>
+blocks([], [], []).<br>
+blocks([X1, X2, X3|Xs], [Y1, Y2, Y3|Ys], [Z1, Z2, Z3|Zs]) :- all_distinct([X1, X])<br>
+
+    </td>
+  </tr>
+</table>
+  <style>
+
+#searchResults {
+      position: absolute;
+      bottom: 89%;
+      right: 0;
+      margin-right: 92px;
+      width: 11.2%;
+      background-color: white;
+      border: 1px solid #ccc;
+      display: none;
+    }
+
+#esquerda {
+  background-color: white; /* Cor de fundo para a Div Esquerda */
+}
+h4{
+  margin-top:10px;
+}
+#direita {
+
+    background-color: black; /* Cor de fundo para a Div Direita */
+}
+  </style>
+</body>
+<script>
+    function searchLi() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementsByClassName("navbar-nav")[0];
+        li = ul.getElementsByTagName("li");
+        var dropdownMenu = document.getElementById("searchResults");
+        var dropdownContent = "";
+      
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = ""; // Mostra o elemento li se a busca for correspondente
+      
+            // Adiciona o item ao dropdown
+            dropdownContent += "<a class='dropdown-item' href='" + a.href + "'>" + txtValue + "</a>";
+          } else {
+            li[i].style.display = "none"; // Oculta o elemento li se a busca não for correspondente
+          }
+        }
+      
+        // Exibe o dropdown com os resultados
+        if (dropdownContent) {
+          dropdownMenu.innerHTML = dropdownContent;
+          dropdownMenu.style.display = "inline-block";
+
+        } 
+      
+        // Evita que o formulário seja enviado
+        return false;
+      }
+  </script>
+  <script>
+    // Inicializa o Prism.js
+    document.addEventListener("DOMContentLoaded", function () {
+      Prism.highlightAll();
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      Prism.highlightAll();
+  
+      // Obtém a área de código
+      const codeArea = document.querySelector("pre code");
+  
+      // Adiciona um evento de clique para capturar o código colado
+      codeArea.addEventListener("click", function () {
+        const text = prompt("Cole o código aqui:");
+        codeArea.textContent = text;
+        Prism.highlightAll();
+      });
+    });
+  </script>
+<style>
+    
+    #searchResults {
+       background-color: grey;
+    }
+    #cap {
+        margin top: 10px;
+        margin left: 20px;
+    }
+    h5 {
+        color: white;
+        text-align: center;
+    }
+    #diario {
+        margin-top: 10px;
+    }
+    .navbar {
+        height: 10px; /* Altere o valor conforme desejado */
+      }
+      
+      /* Remova a barra cinza abaixo do div container-fluid */
+      .container-fluid {
+        height: 60px;
+        margin-top: -9px;
+        background-color: black;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-bottom: none; /* Adicione esta linha para remover a borda inferior */
+      }
+      
+      /* Estilo adicional para melhorar a aparência do conteúdo */
+      body {
+        margin: 0; /* Remova as margens do corpo para preencher a tela */
+        padding-top: 60px; /* Adicione um espaçamento no topo do corpo para evitar que o conteúdo fique atrás da navbar */
+      }
+      
+      /* Tornar o div container-fluid um pouco menor e centralizado */
+      #tab {
+        margin-top: 100px; /* Reduza a margem superior conforme desejado */
+        display: flex;
+        justify-content: center;
+      }
+    td {
+        padding: 10px; /* Altere o valor conforme necessário para obter o espaçamento desejado */
+      }
+    #div1 {
+        align-items:left;
+    }
+    @property --rotate {
+        syntax: "<angle>";
+        initial-value: 132deg;
+        inherits: false;
+      }
+      
+      :root {
+        --card-height: 65vh;
+        --card-width: calc(var(--card-height) / 1.5);
+      }
+      
+      
+      body {
+        min-height: 100vh;
+        background: #212534;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        box-sizing: border-box;
+      }
+      
+      
+      .card {
+        background: #191c29;
+        width: var(--card-width);
+        height: var(--card-height);
+        padding: 3px;
+        position: relative;
+        border-radius: 6px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        font-size: 1.5em;
+        color: rgb(88 199 250 / 0%);
+        cursor: pointer;
+        font-family: cursive;
+      }
+      
+      .card:hover {
+        color: rgb(88 199 250 / 100%);
+        transition: color 1s;
+      }
+      .card:hover:before, .card:hover:after {
+        animation: none;
+        opacity: 0;
+      }
+      
+      
+      .card::before {
+        content: "";
+        width: 104%;
+        height: 102%;
+        border-radius: 8px;
+        background-image: linear-gradient(
+          var(--rotate)
+          , #5ddcff, #3c67e3 43%, #4e00c2);
+          position: absolute;
+          z-index: -1;
+          top: -1%;
+          left: -2%;
+          animation: spin 2.5s linear infinite;
+      }
+      
+      .card::after {
+        position: absolute;
+        content: "";
+        top: calc(var(--card-height) / 6);
+        left: 0;
+        right: 0;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        transform: scale(0.8);
+        filter: blur(calc(var(--card-height) / 6));
+        background-image: linear-gradient(
+          var(--rotate)
+          , #5ddcff, #3c67e3 43%, #4e00c2);
+          opacity: 1;
+        transition: opacity .5s;
+        animation: spin 2.5s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% {
+          --rotate: 0deg;
+        }
+        100% {
+          --rotate: 360deg;
+        }
+      }
+      
+      a {
+        color: #212534;
+        text-decoration: none;
+        font-family: sans-serif;
+        font-weight: bold;
+        margin-top: 2rem;
+      }
+      
+      
+      
+    </style>      
+</html>

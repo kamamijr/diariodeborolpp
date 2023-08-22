@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diario de Bordo Mikael</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Inclua o arquivo de estilo do Prism.js -->
+  <link href="css/prism.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <nav class="navbar navbar-dark bg-dark fixed-top" id="nav">
+      <div class="container-fluid">
+        <a id ="diario"class="navbar-brand" href="/">Diario de Bordo Mikael</a>
+      
+   
+              <form class="d-flex mt-3" role="search"  onsubmit="return searchLi()">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+              
+              <button class="btn btn-success" type="submit">Search</button>
+            </form>
+          
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" style="display: none;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Introdução" id="introducaoLi"> Introdução</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Variáveis" id="variaveisLi">Variáveis </a>
+                </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Tipos" id ="tipodado">Tipos de dados</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Expressões" id ="expressao"> Expressões e sentenças de atribuição</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Estruturas" id="estruturacontrole"> Estruturas de Controle   </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Subprogramas" id="Subprogramas"> Subprogramas</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Tratamento" id="tratamento"> Tratamento de excecao</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Sintaxe" id="sintaxe"> Sintaxe   </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Semântica" id="semantica"> Semântica  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Orientação" id="poo"> Orientação a Objetos </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Linguagem" id="poo"> Linguagem Funcional </a>
+            </li>
+              
+            </ul>
+            </div>
+          </div>
+      
+            </div>
+        
+      </nav>
+</head>
+<body>
+  
+  <div class="dropdown-menu" id="searchResults" ></div>
+  
+<table style="margin-top:100px;">
+  <tr>
+    <td style="  align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: inline-block;
+    max-width:800px;
+    overflow-y: auto;
+    padding: 20px; 
+    height: 100%;" 
+    id="esquerda">
+      <p><h3 style=" color:red;">Tópico: Linguagem Funcional em C#<br></h3>
+
+        A abordagem da linguagem funcional em C# é um paradigma que se concentra na utilização de funções como blocos de construção fundamentais. Este paradigma valoriza a avaliação de expressões e a imutabilidade dos dados, promovendo a criação de código mais legível, modular e seguro. Alguns conceitos-chave da linguagem funcional em C# incluem:<br>
+        <br>
+      <h4>Funções Anônimas:</h4> 
+        A capacidade de criar funções sem atribuir um nome a elas, o que é especialmente útil para passá-las como argumentos para outras funções.
+        <br>
+        <h4>Expressões Lambda:</h4> 
+        São funções anônimas concisas e de uma única expressão. São amplamente usadas para criar funções de ordem superior e aplicar operações em coleções de dados.<br>
+        <br>
+        <h4>Funções de Ordem Superior:</h4> 
+        Essas são funções que podem receber outras funções como argumentos e/ou retorná-las como resultados. Isso possibilita a criação de abstrações poderosas e reutilizáveis.<br>
+        <br>
+        <h4>Imutabilidade:</h4> 
+        No paradigma funcional, os dados são tratados como imutáveis, ou seja, não podem ser alterados após serem criados. Isso reduz a complexidade, ajuda a evitar efeitos colaterais indesejados e torna o código mais previsível.<br>
+        <br>
+        <h4>Recursão:</h4>
+         A recursão é uma técnica onde uma função chama a si mesma para resolver problemas de maneira iterativa. É uma parte fundamental da programação funcional e pode ser usada para resolver diversos tipos de problemas.<br>
+        <br>
+        A programação funcional em C# oferece uma alternativa poderosa ao paradigma imperativo tradicional, permitindo abordagens mais declarativas na criação de código. Ela é especialmente adequada para lidar com problemas complexos que envolvem manipulação de dados, transformações e análises. Ao utilizar os princípios da linguagem funcional em C#, os desenvolvedores podem criar software mais eficiente, modular e resiliente.<br>
+    </p>
+    </td>
+
+    
+    <td style="color:white;"id="direita">
+      <h3>EXEMPLOS DE CODIGO</h3>
+      <h4>1. Funções Anônimas:</h4>
+
+Linguagem<br>
+using System;<br>
+<br>
+class Program {<br>
+    static void Main() {<br>
+        Func<int, int, int> add = (a, b) => a + b;<br>
+        Console.WriteLine("A soma de 3 e 5 é: " + add(3, 5));<br>
+    }<br>
+}<br>
+<div style="background-color:white; height:1px; width:100%;"></div>
+<h4>2. Expressões Lambda:</h4>
+
+Linguagem<br>
+using System;<br>
+<br>
+class Program {<br>
+    static void Main() {<br>
+        Func<int, int> square = x => x * x;<br>
+        Console.WriteLine("O quadrado de 4 é: " + square(4));<br>
+    }<br>
+}<br>
+<div style="background-color:white; height:1px; width:100%;"></div>
+<h4>3. Funções de Ordem Superior:</h4>
+
+Linguagem<br>
+using System;<br>
+using System.Linq;<br>
+<br>
+class Program {<br>
+    static void Main() {<br>
+        int[] numbers = { 1, 2, 3, 4, 5 };<br>
+        Func<int, bool> isEven = x => x % 2 == 0;<br>
+        <br>
+        var evenNumbers = numbers.Where(isEven);<br>
+        Console.WriteLine("Números pares: " + string.Join(", ", evenNumbers));<br>
+    }<br>
+}<br>
+<div style="background-color:white; height:1px; width:100%;"></div>
+<h4>4. Imutabilidade:</h4>
+
+Linguagem<br>
+using System;<br>
+using System.Collections.Immutable;<br>
+<br>
+class Program {<br>
+    static void Main() {<br>
+        var originalList = ImmutableList<int>.Empty;<br>
+        var newList = originalList.Add(1).Add(2).Add(3);<br>
+        <br>
+        Console.WriteLine("Lista original: " + string.Join(", ", originalList));<br>
+        Console.WriteLine("Nova lista: " + string.Join(", ", newList));<br>
+    }<br>
+}<br>
+<div style="background-color:white; height:1px; width:100%;"></div>
+<h4>5. Recursão:</h4>
+
+Linguagem<br>
+using System;<br>
+<br>
+class Program {<br>
+    static int Factorial(int n) {<br>
+        if (n == 0 || n == 1)<br>
+            return 1;<br>
+        else<br>
+            return n * Factorial(n - 1);<br>
+    }<br>
+    <br>
+    static void Main() {<br>
+        int result = Factorial(5);<br>
+        Console.WriteLine("O fatorial de 5 é: " + result);<br>
+    }<br>
+}<br>
+
+  
+    </td>
+  </tr>
+</table>
+  <style>
+
+#searchResults {
+      position: absolute;
+      bottom: 89%;
+      right: 0;
+      margin-right: 92px;
+      width: 11.2%;
+      background-color: white;
+      border: 1px solid #ccc;
+      display: none;
+    }
+
+#esquerda {
+  background-color: white; /* Cor de fundo para a Div Esquerda */
+}
+h4{
+  margin-top:10px;
+}
+#direita {
+
+    background-color: black; /* Cor de fundo para a Div Direita */
+}
+  </style>
+</body>
+<script>
+    function searchLi() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementsByClassName("navbar-nav")[0];
+        li = ul.getElementsByTagName("li");
+        var dropdownMenu = document.getElementById("searchResults");
+        var dropdownContent = "";
+      
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = ""; // Mostra o elemento li se a busca for correspondente
+      
+            // Adiciona o item ao dropdown
+            dropdownContent += "<a class='dropdown-item' href='" + a.href + "'>" + txtValue + "</a>";
+          } else {
+            li[i].style.display = "none"; // Oculta o elemento li se a busca não for correspondente
+          }
+        }
+      
+        // Exibe o dropdown com os resultados
+        if (dropdownContent) {
+          dropdownMenu.innerHTML = dropdownContent;
+          dropdownMenu.style.display = "inline-block";
+
+        } 
+      
+        // Evita que o formulário seja enviado
+        return false;
+      }
+  </script>
+  <script>
+    // Inicializa o Prism.js
+    document.addEventListener("DOMContentLoaded", function () {
+      Prism.highlightAll();
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      Prism.highlightAll();
+  
+      // Obtém a área de código
+      const codeArea = document.querySelector("pre code");
+  
+      // Adiciona um evento de clique para capturar o código colado
+      codeArea.addEventListener("click", function () {
+        const text = prompt("Cole o código aqui:");
+        codeArea.textContent = text;
+        Prism.highlightAll();
+      });
+    });
+  </script>
+<style>
+    
+    #searchResults {
+       background-color: grey;
+    }
+    #cap {
+        margin top: 10px;
+        margin left: 20px;
+    }
+    h5 {
+        color: white;
+        text-align: center;
+    }
+    #diario {
+        margin-top: 10px;
+    }
+    .navbar {
+        height: 10px; /* Altere o valor conforme desejado */
+      }
+      
+      /* Remova a barra cinza abaixo do div container-fluid */
+      .container-fluid {
+        height: 60px;
+        margin-top: -9px;
+        background-color: black;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-bottom: none; /* Adicione esta linha para remover a borda inferior */
+      }
+      
+      /* Estilo adicional para melhorar a aparência do conteúdo */
+      body {
+        margin: 0; /* Remova as margens do corpo para preencher a tela */
+        padding-top: 60px; /* Adicione um espaçamento no topo do corpo para evitar que o conteúdo fique atrás da navbar */
+      }
+      
+      /* Tornar o div container-fluid um pouco menor e centralizado */
+      #tab {
+        margin-top: 100px; /* Reduza a margem superior conforme desejado */
+        display: flex;
+        justify-content: center;
+      }
+    td {
+        padding: 10px; /* Altere o valor conforme necessário para obter o espaçamento desejado */
+      }
+    #div1 {
+        align-items:left;
+    }
+    @property --rotate {
+        syntax: "<angle>";
+        initial-value: 132deg;
+        inherits: false;
+      }
+      
+      :root {
+        --card-height: 65vh;
+        --card-width: calc(var(--card-height) / 1.5);
+      }
+      
+      
+      body {
+        min-height: 100vh;
+        background: #212534;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        box-sizing: border-box;
+      }
+      
+      
+      .card {
+        background: #191c29;
+        width: var(--card-width);
+        height: var(--card-height);
+        padding: 3px;
+        position: relative;
+        border-radius: 6px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        font-size: 1.5em;
+        color: rgb(88 199 250 / 0%);
+        cursor: pointer;
+        font-family: cursive;
+      }
+      
+      .card:hover {
+        color: rgb(88 199 250 / 100%);
+        transition: color 1s;
+      }
+      .card:hover:before, .card:hover:after {
+        animation: none;
+        opacity: 0;
+      }
+      
+      
+      .card::before {
+        content: "";
+        width: 104%;
+        height: 102%;
+        border-radius: 8px;
+        background-image: linear-gradient(
+          var(--rotate)
+          , #5ddcff, #3c67e3 43%, #4e00c2);
+          position: absolute;
+          z-index: -1;
+          top: -1%;
+          left: -2%;
+          animation: spin 2.5s linear infinite;
+      }
+      
+      .card::after {
+        position: absolute;
+        content: "";
+        top: calc(var(--card-height) / 6);
+        left: 0;
+        right: 0;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        transform: scale(0.8);
+        filter: blur(calc(var(--card-height) / 6));
+        background-image: linear-gradient(
+          var(--rotate)
+          , #5ddcff, #3c67e3 43%, #4e00c2);
+          opacity: 1;
+        transition: opacity .5s;
+        animation: spin 2.5s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% {
+          --rotate: 0deg;
+        }
+        100% {
+          --rotate: 360deg;
+        }
+      }
+      
+      a {
+        color: #212534;
+        text-decoration: none;
+        font-family: sans-serif;
+        font-weight: bold;
+        margin-top: 2rem;
+      }
+      
+      
+      
+    </style>      
+</html>

@@ -1,0 +1,6 @@
+- seu_projeto
+  - css
+    - prism.css
+  - js
+    - prism.js
+  - Estruturas.html (ou qualquer outro nome para a página principal do seu site)

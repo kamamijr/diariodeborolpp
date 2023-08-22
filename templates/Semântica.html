@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diario de Bordo Mikael</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Inclua o arquivo de estilo do Prism.js -->
+  <link href="css/prism.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <nav class="navbar navbar-dark bg-dark fixed-top" id="nav">
+      <div class="container-fluid">
+        <a id ="diario"class="navbar-brand" href="/">Diario de Bordo Mikael</a>
+      
+   
+              <form class="d-flex mt-3" role="search"  onsubmit="return searchLi()">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+              
+              <button class="btn btn-success" type="submit">Search</button>
+            </form>
+          
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" style="display: none;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Introdução" id="introducaoLi"> Introdução</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Variáveis" id="variaveisLi">Variáveis </a>
+                </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Tipos" id ="tipodado">Tipos de dados</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Expressões" id ="expressao"> Expressões e sentenças de atribuição</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Estruturas" id="estruturacontrole"> Estruturas de Controle   </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Subprogramas" id="Subprogramas"> Subprogramas</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Tratamento" id="tratamento"> Tratamento de excecao</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Sintaxe" id="sintaxe"> Sintaxe   </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Semântica" id="semantica"> Semântica  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Orientação" id="poo"> Orientação a Objetos </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Linguagem" id="poo"> Linguagem Funcional</a>
+            </li>
+              
+            </ul>
+            </div>
+          </div>
+      
+            </div>
+        
+      </nav>
+</head>
+<body>
+  <div class="dropdown-menu" id="searchResults" ></div>
+<table style="margin-top:100px;">
+  <tr>
+    <td style="  align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: inline-block;
+    max-width:800px;
+    overflow-y: auto;
+    padding: 20px; 
+    height: 100%;" 
+    id="esquerda">
+      <p><h3 style=" color:red;">Tópico: Semântica em C#<br></h3>
+
+        A semântica em programação refere-se ao significado de um programa, tanto em termos de estrutura quanto de comportamento. Ela pode ser dividida em semântica estática e semântica dinâmica. A semântica estática lida com análises feitas antes da execução, como verificações de tipos e escopo. A semântica dinâmica envolve a interpretação do comportamento do programa durante a execução.<br>
+        
+        <h4>Subtópico: Semântica Estática</h4>
+        
+ 
+        A semântica estática lida com aspectos do programa que podem ser verificados sem a necessidade de executar o código. Isso inclui análises de tipo, verificação de escopo, resolução de sobrecarga de funções e detecção de erros antes da execução.<br>
+        
+        <h4>Subtópico: Gramáticas de Atributos</h4>
+        
+
+        As gramáticas de atributos são usadas na semântica estática para associar informações a nós de uma árvore sintática, como anotações de tipos. Elas permitem propagar informações e realizar verificações durante a análise do programa.<br>
+        
+        <h4>Subtópico: Semântica Dinâmica</h4>
+        
+
+        A semântica dinâmica concentra-se no comportamento do programa durante a execução. Isso inclui a interpretação do significado das instruções, avaliação de expressões e interações entre partes do programa.<br>
+        
+        <h4>Subtópico: Semântica Operacional</h4>
+        
+
+        A semântica operacional descreve como as instruções são executadas passo a passo em um programa. Ela inclui a especificação de regras de avaliação para cada construção da linguagem, como atribuições, condicionais e loops.<br>
+        
+        <h4>Subtópico: Semântica Denotacional</h4>
+
+        A semântica denotacional fornece uma abordagem matemática para descrever o comportamento de programas. Ela utiliza funções matemáticas para relacionar construções de linguagem a valores e comportamentos.<br>
+        
+        Este resumo oferece uma visão abrangente dos diferentes aspectos da semântica em programação, cobrindo semântica estática, gramáticas de atributos, semântica dinâmica, semântica operacional e semântica denotacional. Agora, vou fornecer exemplos de código relacionados a esses tópicos.<br>
+    </p>
+    </td>
+
+    
+    <td style="color:white;"id="direita">
+      <h3>EXEMPLOS DE CODIGO</h3>
+      <h4>Exemplo de Código: Semântica Estática - Verificação de Tipos em C#</h4>
+
+
+class Program {<br>
+    static void Main(string[] args) {<br>
+        int numero = "texto"; // Erro de tipo: atribuição inválida<br>
+    }<br>
+}<br>
+<div style="background-color:white; height:1px; width:100%;"></div>
+<h4>Exemplo de Código: Gramáticas de Atributos em C#</h4>
+
+
+class Aluno {<br>
+    public string Nome { get; set; }<br>
+    public int Nota { get; set; }<br>
+}<br>
+<br>
+class Program {<br>
+    static void Main(string[] args) {<br>
+        Aluno aluno = new Aluno();<br>
+        aluno.Nome = "Maria";<br><br>
+        aluno.Nota = "A"; // Erro de tipo: atribuição inválida<br>
+    }<br>
+}<br>
+<h4>Exemplo de Código: Semântica Dinâmica - Avaliação de Expressões em C#</h4>
+
+
+class Program {<br>
+    static void Main(string[] args) {<br>
+        int a = 5;<br>
+        int b = 3;<br>
+        int soma = a + b;<br>
+        Console.WriteLine(soma); // Resultado: 8<br>
+    }<br>
+}<br>
+<h4>Exemplo de Código: Semântica Operacional - Avaliação de Condicional em C#</h4>
+
+
+class Program {<br>
+    static void Main(string[] args) {<br>
+        int idade = 18;<br>
+        if (idade >= 18) {<br>
+            Console.WriteLine("Maior de idade");<br>
+        } else {<br>
+            Console.WriteLine("Menor de idade");<br>
+        }<br>
+    }<br>
+}<br>
+<h4>Exemplo de Código: Semântica Denotacional - Função em C#</h4>
+
+
+class Program {<br>
+    static int Funcao(int x) {<br>
+        return 2 * x + 1;<br>
+    }<br>
+    <br>
+    static void Main(string[] args) {<br>
+        int resultado = Funcao(3); // Resultado: 7<br>
+        Console.WriteLine(resultado);<br>
+    }<br>
+}<br>
+    </td>
+  </tr>
+</table>
+  <style>
+
+#searchResults {
+      position: absolute;
+      bottom: 89%;
+      right: 0;
+      margin-right: 92px;
+      width: 11.2%;
+      background-color: white;
+      border: 1px solid #ccc;
+      display: none;
+    }
+
+#esquerda {
+  background-color: white; /* Cor de fundo para a Div Esquerda */
+}
+h4{
+  margin-top:10px;
+}
+#direita {
+
+    background-color: black; /* Cor de fundo para a Div Direita */
+}
+  </style>
+</body>
+<script>
+    function searchLi() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementsByClassName("navbar-nav")[0];
+        li = ul.getElementsByTagName("li");
+        var dropdownMenu = document.getElementById("searchResults");
+        var dropdownContent = "";
+      
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = ""; // Mostra o elemento li se a busca for correspondente
+      
+            // Adiciona o item ao dropdown
+            dropdownContent += "<a class='dropdown-item' href='" + a.href + "'>" + txtValue + "</a>";
+          } else {
+            li[i].style.display = "none"; // Oculta o elemento li se a busca não for correspondente
+          }
+        }
+      
+        // Exibe o dropdown com os resultados
+        if (dropdownContent) {
+          dropdownMenu.innerHTML = dropdownContent;
+          dropdownMenu.style.display = "inline-block";
+
+        } 
+      
+        // Evita que o formulário seja enviado
+        return false;
+      }
+  </script>
+  <script>
+    // Inicializa o Prism.js
+    document.addEventListener("DOMContentLoaded", function () {
+      Prism.highlightAll();
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      Prism.highlightAll();
+  
+      // Obtém a área de código
+      const codeArea = document.querySelector("pre code");
+  
+      // Adiciona um evento de clique para capturar o código colado
+      codeArea.addEventListener("click", function () {
+        const text = prompt("Cole o código aqui:");
+        codeArea.textContent = text;
+        Prism.highlightAll();
+      });
+    });
+  </script>
+<style>
+    
+    #searchResults {
+       background-color: grey;
+    }
+    #cap {
+        margin top: 10px;
+        margin left: 20px;
+    }
+    h5 {
+        color: white;
+        text-align: center;
+    }
+    #diario {
+        margin-top: 10px;
+    }
+    .navbar {
+        height: 10px; /* Altere o valor conforme desejado */
+      }
+      
+      /* Remova a barra cinza abaixo do div container-fluid */
+      .container-fluid {
+        height: 60px;
+        margin-top: -9px;
+        background-color: black;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-bottom: none; /* Adicione esta linha para remover a borda inferior */
+      }
+      
+      /* Estilo adicional para melhorar a aparência do conteúdo */
+      body {
+        margin: 0; /* Remova as margens do corpo para preencher a tela */
+        padding-top: 60px; /* Adicione um espaçamento no topo do corpo para evitar que o conteúdo fique atrás da navbar */
+      }
+      
+      /* Tornar o div container-fluid um pouco menor e centralizado */
+      #tab {
+        margin-top: 100px; /* Reduza a margem superior conforme desejado */
+        display: flex;
+        justify-content: center;
+      }
+    td {
+        padding: 10px; /* Altere o valor conforme necessário para obter o espaçamento desejado */
+      }
+    #div1 {
+        align-items:left;
+    }
+    @property --rotate {
+        syntax: "<angle>";
+        initial-value: 132deg;
+        inherits: false;
+      }
+      
+      :root {
+        --card-height: 65vh;
+        --card-width: calc(var(--card-height) / 1.5);
+      }
+      
+      
+      body {
+        min-height: 100vh;
+        background: #212534;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        box-sizing: border-box;
+      }
+      
+      
+      .card {
+        background: #191c29;
+        width: var(--card-width);
+        height: var(--card-height);
+        padding: 3px;
+        position: relative;
+        border-radius: 6px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        font-size: 1.5em;
+        color: rgb(88 199 250 / 0%);
+        cursor: pointer;
+        font-family: cursive;
+      }
+      
+      .card:hover {
+        color: rgb(88 199 250 / 100%);
+        transition: color 1s;
+      }
+      .card:hover:before, .card:hover:after {
+        animation: none;
+        opacity: 0;
+      }
+      
+      
+      .card::before {
+        content: "";
+        width: 104%;
+        height: 102%;
+        border-radius: 8px;
+        background-image: linear-gradient(
+          var(--rotate)
+          , #5ddcff, #3c67e3 43%, #4e00c2);
+          position: absolute;
+          z-index: -1;
+          top: -1%;
+          left: -2%;
+          animation: spin 2.5s linear infinite;
+      }
+      
+      .card::after {
+        position: absolute;
+        content: "";
+        top: calc(var(--card-height) / 6);
+        left: 0;
+        right: 0;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        transform: scale(0.8);
+        filter: blur(calc(var(--card-height) / 6));
+        background-image: linear-gradient(
+          var(--rotate)
+          , #5ddcff, #3c67e3 43%, #4e00c2);
+          opacity: 1;
+        transition: opacity .5s;
+        animation: spin 2.5s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% {
+          --rotate: 0deg;
+        }
+        100% {
+          --rotate: 360deg;
+        }
+      }
+      
+      a {
+        color: #212534;
+        text-decoration: none;
+        font-family: sans-serif;
+        font-weight: bold;
+        margin-top: 2rem;
+      }
+      
+      
+      
+    </style>      
+</html>

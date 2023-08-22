@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diario de Bordo Mikael</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <nav class="navbar navbar-dark bg-dark fixed-top" id="nav">
+        <div class="container-fluid">
+          <a id ="diario"class="navbar-brand" href="#">Diario de Bordo Mikael</a>
+        
+     
+                <form class="d-flex mt-3" role="search"  onsubmit="return searchLi()">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+                
+                <button class="btn btn-success" type="submit">Search</button>
+              </form>
+            
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" style="display: none;">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/Introdução" id="introducaoLi"> Introdução</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Variáveis" id="variaveisLi">Variáveis </a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Tipos" id ="tipodado">Tipos de dados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Expressões" id ="expressao"> Expressões e sentenças de atribuição</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Estruturas" id="estruturacontrole"> Estruturas de Controle   </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Subprogramas" id="Subprogramas"> Subprogramas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Tratamento" id="tratamento"> Tratamento de excecao</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Sintaxe" id="sintaxe"> Sintaxe   </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Semântica" id="semantica"> Semântica  </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Orientação" id="poo"> Orientação a Objetos </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/Linguagem" id="poo"> Linguagem Funcional </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Prolog" id="poo"> Prolog </a>
+            </li>
+                
+              </ul>
+              </div>
+            </div>
+        
+      </nav>
+</head>
+<body>
+    <div class="dropdown-menu" id="searchResults" ></div>
+    <!-- Seu conteúdo do index.html aqui -->
+    <table id="tab">
+    <tr>
+    <td>
+        <h5>conteudo da prova 1</h5>
+    <div class="card" id="div1">
+
+      <a href="Introdução">Introdução</a>
+        <a href="Variáveis">Variáveis </a>  
+        <a href="Tipos"> Tipos de dados</a>
+        <a href="Expressões">Expressões e sentenças de atribuição </a>
+    </div>
+</td>
+<td>
+    <h5>conteudo da prova 2</h5>
+    <div class="card" id="div2">
+        <a href="Estruturas">Estruturas de Controle</a>
+        <a href="Subprogramas">Subprogramas</a>
+        <a href="Tratamento">Tratamento de excecao</a>
+        <a href="Sintaxe"> Sintaxe</a>
+        <a href="Semântica">Semântica</a>
+    </div>
+</td>
+<td>
+    <h5>conteudo da prova 3</h5>
+    <div class="card" id="div3">
+        
+      <a href="Orientação">Orientação a Objetos</a>
+        <a href="Linguagem">Linguagem Funcional</a>
+        <a href="Prolog">Prolog</a>
+    </div>
+</td>
+</tr>
+</table>
+
+
+</body>
+<script>
+    function searchLi() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementsByClassName("navbar-nav")[0];
+        li = ul.getElementsByTagName("li");
+        var dropdownMenu = document.getElementById("searchResults");
+        var dropdownContent = "";
+      
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = ""; // Mostra o elemento li se a busca for correspondente
+      
+            // Adiciona o item ao dropdown
+            dropdownContent += "<a class='dropdown-item' href='" + a.href + "'>" + txtValue + "</a>";
+          } else {
+            li[i].style.display = "none"; // Oculta o elemento li se a busca não for correspondente
+          }
+        }
+      
+        // Exibe o dropdown com os resultados
+        if (dropdownContent) {
+          dropdownMenu.innerHTML = dropdownContent;
+          dropdownMenu.style.display = "inline-block";
+
+        } 
+      
+        // Evita que o formulário seja enviado
+        return false;
+      }
+  </script>
+  
+<style>
+    
+    #searchResults {
+      position: absolute;
+      bottom: 89%;
+      right: 0;
+      margin-right: 92px;
+      width: 11.2%;
+      background-color: white;
+      border: 1px solid #ccc;
+      display: none;
+    }
+    #cap {
+        margin top: 10px;
+        margin left: 20px;
+    }
+    h5 {
+        color: white;
+        text-align: center;
+    }
+    a {
+        color: white;
+        text-align: center;
+    }
+    #diario {
+        margin-top: 10px;
+    }
+    .navbar {
+        height: 10px; /* Altere o valor conforme desejado */
+      }
+      
+      /* Remova a barra cinza abaixo do div container-fluid */
+      .container-fluid {
+        height: 60px;
+        margin-top: -9px;
+        background-color: black;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-bottom: none; /* Adicione esta linha para remover a borda inferior */
+      }
+      
+      /* Estilo adicional para melhorar a aparência do conteúdo */
+      body {
+        margin: 0; /* Remova as margens do corpo para preencher a tela */
+        padding-top: 60px; /* Adicione um espaçamento no topo do corpo para evitar que o conteúdo fique atrás da navbar */
+      }
+      
+      /* Tornar o div container-fluid um pouco menor e centralizado */
+      #tab {
+        margin-top: 100px; /* Reduza a margem superior conforme desejado */
+        display: flex;
+        justify-content: center;
+      }
+    td {
+        padding: 10px; /* Altere o valor conforme necessário para obter o espaçamento desejado */
+      }
+    #div1 {
+        align-items:left;
+    }
+    @property --rotate {
+        syntax: "<angle>";
+        initial-value: 132deg;
+        inherits: false;
+      }
+      
+      :root {
+        --card-height: 65vh;
+        --card-width: calc(var(--card-height) / 1.5);
+      }
+      
+      
+      body {
+        min-height: 100vh;
+        background: #212534;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        box-sizing: border-box;
+      }
+      
+      
+      .card {
+        background: #191c29;
+        width: var(--card-width);
+        height: var(--card-height);
+        padding: 3px;
+        position: relative;
+        border-radius: 6px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        font-size: 1.5em;
+        color: rgb(88 199 250 / 0%);
+        cursor: pointer;
+        font-family: cursive;
+      }
+      
+      .card:hover {
+        color: rgb(88 199 250 / 100%);
+        transition: color 1s;
+      }
+      .card:hover:before, .card:hover:after {
+        animation: none;
+        opacity: 0;
+      }
+      
+      
+      .card::before {
+        content: "";
+        width: 104%;
+        height: 102%;
+        border-radius: 8px;
+        background-image: linear-gradient(
+          var(--rotate)
+          , #5ddcff, #3c67e3 43%, #4e00c2);
+          position: absolute;
+          z-index: -1;
+          top: -1%;
+          left: -2%;
+          animation: spin 2.5s linear infinite;
+      }
+      
+      .card::after {
+        position: absolute;
+        content: "";
+        top: calc(var(--card-height) / 6);
+        left: 0;
+        right: 0;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        transform: scale(0.8);
+        filter: blur(calc(var(--card-height) / 6));
+        background-image: linear-gradient(
+          var(--rotate)
+          , #5ddcff, #3c67e3 43%, #4e00c2);
+          opacity: 1;
+        transition: opacity .5s;
+        animation: spin 2.5s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% {
+          --rotate: 0deg;
+        }
+        100% {
+          --rotate: 360deg;
+        }
+      }
+      
+
+      
+      
+      
+    </style>      
+</html>

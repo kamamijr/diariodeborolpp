@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diario de Bordo Mikael</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Inclua o arquivo de estilo do Prism.js -->
+  <link href="css/prism.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <nav class="navbar navbar-dark bg-dark fixed-top" id="nav">
+      <div class="container-fluid">
+        <a id ="diario"class="navbar-brand" href="/">Diario de Bordo Mikael</a>
+      
+   
+              <form class="d-flex mt-3" role="search"  onsubmit="return searchLi()">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+              
+              <button class="btn btn-success" type="submit">Search</button>
+            </form>
+          
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" style="display: none;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Introdução" id="introducaoLi"> Introdução</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Variáveis" id="variaveisLi">Variáveis </a>
+                </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Tipos" id ="tipodado">Tipos de dados</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Expressões" id ="expressao"> Expressões e sentenças de atribuição</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Estruturas" id="estruturacontrole"> Estruturas de Controle   </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Subprogramas" id="Subprogramas"> Subprogramas</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Tratamento" id="tratamento"> Tratamento de excecao</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Sintaxe" id="sintaxe"> Sintaxe   </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Semântica" id="semantica"> Semântica  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Orientação" id="poo"> Orientação a Objetos </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Linguagem" id="poo"> Linguagem Funcional </a>
+            </li>
+              
+            </ul>
+            </div>
+          </div>
+      
+            </div>
+        
+      </nav>
+</head>
+<body>
+  <div class="dropdown-menu" id="searchResults" ></div>
+<table style="margin-top:100px;">
+  <tr>
+    <td style="  align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: inline-block;
+    max-width:800px;
+    overflow-y: auto;
+    padding: 20px; 
+    height: 100%;" 
+    id="esquerda">
+      <p><h3 style=" color:red;">Tópico:Tipo de Dados em C#<br></h3>
+     
+
+        
+        Os tipos de dados são essenciais para definir o tipo de valor que uma variável pode conter. Eles determinam como os dados são armazenados e manipulados na memória.<br>
+        
+        <h4> Subtópico: Introdução</h4>
+        
+        
+        A introdução aos tipos de dados abrange sua importância para a representação e manipulação correta dos valores em um programa. Os tipos garantem que as operações sejam realizadas de acordo com as regras definidas.<br>
+        
+        <h4> Subtópico: Tipos Primitivos</h4>
+        
+        
+        Os tipos primitivos são os blocos de construção fundamentais para a construção de estruturas de dados mais complexas. Eles incluem inteiros, ponto flutuante, booleanos, caracteres, strings, números complexos e decimais.<br>
+        
+        <h4> Subtópico: Tipos Ordinais</h4>
+        
+        
+        Os tipos ordinais representam valores discretos, como enumerações e conjuntos. Eles têm uma ordem específica e são frequentemente usados em decisões de programação.<br>
+        
+        <h4> Subtópico: Array</h4>
+        
+        
+        Arrays são coleções de elementos do mesmo tipo, acessíveis através de um índice. Eles são usados para armazenar dados relacionados.<br>
+        
+        <h4> Subtópico: Tipo Registro</h4>
+        
+        
+        O tipo registro é uma estrutura de dados que pode conter vários campos com diferentes tipos de dados. Ele é usado para agrupar informações relacionadas.<br>
+        
+        <h4> Subtópico: Tipo União</h4>
+        
+        
+        O tipo união permite armazenar diferentes tipos de dados em um único espaço de memória. Existem uniões livres e uniões discriminadas, dependendo da forma como são acessadas.<br>
+        
+        <h4> Subtópico: Tipo Ponteiro</h4>
+        
+        
+        Os tipos ponteiro permitem armazenar o endereço de memória de uma variável. Eles são usados para acessar e manipular dados indiretamente.<br>
+        
+        <h4> Subtópico: Tipo Referência</h4>
+        
+        
+        Os tipos de referência armazenam referências a objetos na memória. Eles são usados para gerenciar objetos dinamicamente alocados.<br>
+        
+        <h4> Subtópico: Verificação de Tipo</h4>
+        
+        
+        A verificação de tipo é o processo de garantir que as operações sejam aplicadas apenas a tipos compatíveis. Isso evita erros de tipo e comportamento inesperado.<br>
+        
+       
+    </p>
+    </td>
+
+    
+    <td style="color:white;"id="direita">
+      <h3>EXEMPLOS DE CODIGO</h3>
+      <h4>exemplo de Código: Tipos Primitivos em C#</h4>
+
+
+using System;<br>
+<br>
+class Program {<br>
+    static void Main(string[] args) {<br>
+        int idade = 25;<br>
+        double salario = 1500.75;<br>
+        bool ativo = true;<br>
+        char genero = 'M';<br>
+        string nome = "Ana";<br>
+        decimal valor = 120.50M;<br>
+        Complexo complexo = new Complexo(3, 4);<br>
+        <br>
+        Console.WriteLine("Idade: " + idade);<br>
+        Console.WriteLine("Salário: " + salario);<br>
+        Console.WriteLine("Ativo: " + ativo);<br>
+        Console.WriteLine("Gênero: " + genero);<br>
+        Console.WriteLine("Nome: " + nome);<br>
+        Console.WriteLine("Valor: " + valor);<br>
+        Console.WriteLine("Complexo: " + complexo.Real + " + " + complexo.Imaginario + "i");<br>
+    }<br>
+}<br>
+<h4>exemplo de Código: Array em C#</h4>
+
+
+using System;
+
+class Program {<br>
+    static void Main(string[] args) {<br>
+        int[] numeros = new int[5];<br>
+        numeros[0] = 10;<br>
+        numeros[1] = 20;<br>
+        numeros[2] = 30;<br>
+        numeros[3] = 40;<br>
+        numeros[4] = 50;<br>
+        <br>
+        for (int i = 0; i < numeros.Length; i++) {<br>
+            Console.WriteLine("Número " + (i + 1) + ": " + numeros[i]);<br>
+        }<br>
+    }<br>
+}<br>
+<h4>exemplo de Código: Tipo Registro em C#</h4>
+
+
+using System;<br>
+<br>
+struct Pessoa {<br>
+    public string Nome;<br>
+    public int Idade;<br>
+}<br>
+<br>
+class Program {<br>
+    static void Main(string[] args) {<br>
+        Pessoa pessoa1;<br>
+        pessoa1.Nome = "João";<br>
+        pessoa1.Idade = 30;<br>
+        <br>
+        Console.WriteLine("Nome: " + pessoa1.Nome);<br>
+        Console.WriteLine("Idade: " + pessoa1.Idade);<br>
+    }<br>
+}<br>
+<h4>exemplo de Código: Tipo Ponteiro em C#</h4>
+
+
+using System;<br>
+<br>
+class Program {<br>
+    unsafe static void Main(string[] args) {<br>
+        int numero = 5;<br>
+        int* ponteiro = &numero;<br>
+        <br>
+        Console.WriteLine("Valor: " + *ponteiro);<br>
+    }<br>
+}<br>
+<h4>exemplo de Código: Tipo Referência em C#</h4>
+
+
+using System;<br>
+<br>
+class Pessoa {<br>
+    public string Nome;<br>
+    public int Idade;<br>
+}<br>
+<br>
+class Program {<br>
+    static void Main(string[] args) {<br>
+        Pessoa pessoa1 = new Pessoa();<br>
+        pessoa1.Nome = "Maria";<br>
+        pessoa1.Idade = 25;<br>
+        <br>
+        Pessoa pessoa2 = pessoa1; // Cria uma referência, não uma cópia<br>
+        <br>
+        Console.WriteLine("Pessoa 1 - Nome: " + pessoa1.Nome + ", Idade: " + pessoa1.Idade);<br>
+        Console.WriteLine("Pessoa 2 - Nome: " + pessoa2.Nome + ", Idade: " + pessoa2.Idade);<br>
+        <br>
+        pessoa2.Nome = "Ana"; // Altera também o nome da pessoa1<br>
+        <br>
+        Console.WriteLine("Pessoa 1 - Nome: " + pessoa1.Nome + ", Idade: " + pessoa1.Idade);<br>
+        Console.WriteLine("Pessoa 2 - Nome: " + pessoa2.Nome + ", Idade: " + pessoa2.Idade);<br>
+    }<br>
+}<br>
+<div style="background-color:white; height:1px; width:100%;"></div>
+  
+    </td>
+  </tr>
+</table>
+  <style>
+
+#searchResults {
+      position: absolute;
+      bottom: 89%;
+      right: 0;
+      margin-right: 92px;
+      width: 11.2%;
+      background-color: white;
+      border: 1px solid #ccc;
+      display: none;
+    }
+
+#esquerda {
+  background-color: white; /* Cor de fundo para a Div Esquerda */
+}
+h4{
+  margin-top:10px;
+}
+#direita {
+
+    background-color: black; /* Cor de fundo para a Div Direita */
+}
+  </style>
+</body>
+<script>
+    function searchLi() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementsByClassName("navbar-nav")[0];
+        li = ul.getElementsByTagName("li");
+        var dropdownMenu = document.getElementById("searchResults");
+        var dropdownContent = "";
+      
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = ""; // Mostra o elemento li se a busca for correspondente
+      
+            // Adiciona o item ao dropdown
+            dropdownContent += "<a class='dropdown-item' href='" + a.href + "'>" + txtValue + "</a>";
+          } else {
+            li[i].style.display = "none"; // Oculta o elemento li se a busca não for correspondente
+          }
+        }
+      
+        // Exibe o dropdown com os resultados
+        if (dropdownContent) {
+          dropdownMenu.innerHTML = dropdownContent;
+          dropdownMenu.style.display = "inline-block";
+
+        } 
+      
+        // Evita que o formulário seja enviado
+        return false;
+      }
+  </script>
+  <script>
+    // Inicializa o Prism.js
+    document.addEventListener("DOMContentLoaded", function () {
+      Prism.highlightAll();
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      Prism.highlightAll();
+  
+      // Obtém a área de código
+      const codeArea = document.querySelector("pre code");
+  
+      // Adiciona um evento de clique para capturar o código colado
+      codeArea.addEventListener("click", function () {
+        const text = prompt("Cole o código aqui:");
+        codeArea.textContent = text;
+        Prism.highlightAll();
+      });
+    });
+  </script>
+<style>
+    
+    #searchResults {
+       background-color: grey;
+    }
+    #cap {
+        margin top: 10px;
+        margin left: 20px;
+    }
+    h5 {
+        color: white;
+        text-align: center;
+    }
+    #diario {
+        margin-top: 10px;
+    }
+    .navbar {
+        height: 10px; /* Altere o valor conforme desejado */
+      }
+      
+      /* Remova a barra cinza abaixo do div container-fluid */
+      .container-fluid {
+        height: 60px;
+        margin-top: -9px;
+        background-color: black;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-bottom: none; /* Adicione esta linha para remover a borda inferior */
+      }
+      
+      /* Estilo adicional para melhorar a aparência do conteúdo */
+      body {
+        margin: 0; /* Remova as margens do corpo para preencher a tela */
+        padding-top: 60px; /* Adicione um espaçamento no topo do corpo para evitar que o conteúdo fique atrás da navbar */
+      }
+      
+      /* Tornar o div container-fluid um pouco menor e centralizado */
+      #tab {
+        margin-top: 100px; /* Reduza a margem superior conforme desejado */
+        display: flex;
+        justify-content: center;
+      }
+    td {
+        padding: 10px; /* Altere o valor conforme necessário para obter o espaçamento desejado */
+      }
+    #div1 {
+        align-items:left;
+    }
+    @property --rotate {
+        syntax: "<angle>";
+        initial-value: 132deg;
+        inherits: false;
+      }
+      
+      :root {
+        --card-height: 65vh;
+        --card-width: calc(var(--card-height) / 1.5);
+      }
+      
+      
+      body {
+        min-height: 100vh;
+        background: #212534;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        box-sizing: border-box;
+      }
+      
+      
+      .card {
+        background: #191c29;
+        width: var(--card-width);
+        height: var(--card-height);
+        padding: 3px;
+        position: relative;
+        border-radius: 6px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        font-size: 1.5em;
+        color: rgb(88 199 250 / 0%);
+        cursor: pointer;
+        font-family: cursive;
+      }
+      
+      .card:hover {
+        color: rgb(88 199 250 / 100%);
+        transition: color 1s;
+      }
+      .card:hover:before, .card:hover:after {
+        animation: none;
+        opacity: 0;
+      }
+      
+      
+      .card::before {
+        content: "";
+        width: 104%;
+        height: 102%;
+        border-radius: 8px;
+        background-image: linear-gradient(
+          var(--rotate)
+          , #5ddcff, #3c67e3 43%, #4e00c2);
+          position: absolute;
+          z-index: -1;
+          top: -1%;
+          left: -2%;
+          animation: spin 2.5s linear infinite;
+      }
+      
+      .card::after {
+        position: absolute;
+        content: "";
+        top: calc(var(--card-height) / 6);
+        left: 0;
+        right: 0;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        transform: scale(0.8);
+        filter: blur(calc(var(--card-height) / 6));
+        background-image: linear-gradient(
+          var(--rotate)
+          , #5ddcff, #3c67e3 43%, #4e00c2);
+          opacity: 1;
+        transition: opacity .5s;
+        animation: spin 2.5s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% {
+          --rotate: 0deg;
+        }
+        100% {
+          --rotate: 360deg;
+        }
+      }
+      
+      a {
+        color: #212534;
+        text-decoration: none;
+        font-family: sans-serif;
+        font-weight: bold;
+        margin-top: 2rem;
+      }
+      
+      
+      
+    </style>      
+</html>
